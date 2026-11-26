@@ -1,0 +1,21 @@
+PANDUAN SINGKAT SIKASU
+
+1. Ekstrak ZIP.
+2. Buka github.com lalu buat repository baru bernama sikasu.
+3. Unggah semua isi folder ini ke repository. Sertakan folder .streamlit dan assets.
+4. Klik Commit changes.
+5. Buka share.streamlit.io dan pilih Create app.
+6. Pilih repository sikasu, branch main, file app.py.
+7. Buka Advanced settings > Secrets.
+8. Tempel connection string Neon seperti ini:
+   NEON_DATABASE_URL = "postgresql://USERNAME:PASSWORD@HOST/DBNAME?sslmode=require"
+   Ganti dengan URL database milik kalian. Jangan masukkan password ke GitHub.
+9. Klik Deploy.
+10. Di website, pilih Database Neon, pilih tabel, klik Muat data dari Neon.
+11. Di sidebar pilih kolom kabupaten, kecamatan, produksi, tahun, dan satuan.
+
+Untuk mencoba tampilan sebelum menghubungkan Neon, pilih "Data contoh".
+Data contoh hanya simulasi, bukan data resmi.
+
+Jika data tersebar di beberapa tabel, pilih metode Query SQL dan gunakan query SELECT
+untuk menggabungkan tabel. Jangan gunakan query yang mengubah data.
